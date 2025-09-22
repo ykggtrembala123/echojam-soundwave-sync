@@ -9,6 +9,11 @@ import PlayerDemo from "./pages/PlayerDemo";
 import Comunidade from "./pages/Comunidade";
 import Produtos from "./pages/Produtos";
 import Sobre from "./pages/Sobre";
+import Documentacao from "./pages/Documentacao";
+import Status from "./pages/Status";
+import TermosUso from "./pages/TermosUso";
+import Politica from "./pages/Politica";
+import Licenca from "./pages/Licenca";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -26,6 +31,11 @@ const App = () => (
           <Route path="/comunidade" element={<Comunidade />} />
           <Route path="/produtos" element={<Produtos />} />
           <Route path="/sobre" element={<Sobre />} />
+          <Route path="/documentacao" element={<Documentacao />} />
+          <Route path="/status" element={<Status />} />
+          <Route path="/termos-uso" element={<TermosUso />} />
+          <Route path="/politica" element={<Politica />} />
+          <Route path="/licenca" element={<Licenca />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

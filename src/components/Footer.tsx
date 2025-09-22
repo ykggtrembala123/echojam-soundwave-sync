@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Github, Twitter, Instagram, Mail } from 'lucide-react';
-import echoJamLogo from '@/assets/echojam-logo.jpg';
+import echoJamLogo from '@/assets/echojam-new-logo.png';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -53,10 +53,10 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Suporte</h4>
             <ul className="space-y-2">
+              <li><Link to="/documentacao" className="text-sm text-muted-foreground hover:text-primary transition-colors">Documentação</Link></li>
+              <li><Link to="/status" className="text-sm text-muted-foreground hover:text-primary transition-colors">Status</Link></li>
               <li><Link to="/sobre" className="text-sm text-muted-foreground hover:text-primary transition-colors">FAQ</Link></li>
               <li><Link to="/sobre" className="text-sm text-muted-foreground hover:text-primary transition-colors">Contato</Link></li>
-              <li><a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">Documentação</a></li>
-              <li><a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">Status</a></li>
             </ul>
           </div>
 
@@ -64,9 +64,9 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Legal</h4>
             <ul className="space-y-2">
-              <li><a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">Termos de Uso</a></li>
-              <li><a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">Política de Privacidade</a></li>
-              <li><a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">Licenças</a></li>
+              <li><Link to="/termos-uso" className="text-sm text-muted-foreground hover:text-primary transition-colors">Termos de Uso</Link></li>
+              <li><Link to="/politica" className="text-sm text-muted-foreground hover:text-primary transition-colors">Política de Privacidade</Link></li>
+              <li><Link to="/licenca" className="text-sm text-muted-foreground hover:text-primary transition-colors">Licença</Link></li>
             </ul>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import { Download, Monitor, Smartphone, HardDrive } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { downloadLinks } from '@/config/downloads';
 
 const DownloadBanner = () => {
   return (
@@ -15,15 +16,24 @@ const DownloadBanner = () => {
           </div>
           
           <div className="flex flex-wrap gap-2 justify-center">
-            <Button className="btn-neon-primary text-xs px-3 py-2 h-auto">
+            <Button 
+              className="btn-neon-primary text-xs px-3 py-2 h-auto"
+              onClick={() => window.open(downloadLinks.windows, '_blank')}
+            >
               <Monitor className="mr-1 h-3 w-3" />
               Windows
             </Button>
-            <Button className="btn-neon-secondary text-xs px-3 py-2 h-auto">
+            <Button 
+              className="btn-neon-secondary text-xs px-3 py-2 h-auto"
+              onClick={() => window.open(downloadLinks.mac, '_blank')}
+            >
               <Smartphone className="mr-1 h-3 w-3" />
               Mac
             </Button>
-            <Button className="btn-neon-accent text-xs px-3 py-2 h-auto">
+            <Button 
+              className="btn-neon-accent text-xs px-3 py-2 h-auto"
+              onClick={() => window.open(downloadLinks.linux, '_blank')}
+            >
               <HardDrive className="mr-1 h-3 w-3" />
               Linux
             </Button>

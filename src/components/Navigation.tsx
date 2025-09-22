@@ -2,7 +2,8 @@ import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import echoJamLogo from '@/assets/echojam-logo.jpg';
+import echoJamLogo from '@/assets/echojam-new-logo.png';
+import { downloadLinks } from '@/config/downloads';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -50,7 +51,10 @@ const Navigation = () => {
 
           {/* Download Button */}
           <div className="hidden md:flex">
-            <Button className="btn-neon-primary">
+            <Button 
+              className="btn-neon-primary"
+              onClick={() => window.open(downloadLinks.windows, '_blank')}
+            >
               <Download className="mr-2 h-4 w-4" />
               Baixar Grátis
             </Button>
@@ -85,7 +89,10 @@ const Navigation = () => {
                 </Link>
               ))}
               <div className="px-3 pt-2">
-                <Button className="btn-neon-primary w-full">
+                <Button 
+                  className="btn-neon-primary w-full"
+                  onClick={() => window.open(downloadLinks.windows, '_blank')}
+                >
                   <Download className="mr-2 h-4 w-4" />
                   Baixar Grátis
                 </Button>

@@ -6,7 +6,7 @@ import DownloadBanner from '@/components/DownloadBanner';
 import Footer from '@/components/Footer';
 import FeatureCard from '@/components/FeatureCard';
 import Equalizer from '@/components/Equalizer';
-import echoJamLogo from '@/assets/echojam-logo.jpg';
+import { downloadLinks } from '@/config/downloads';
 import playerMockup from '@/assets/player-mockup.png';
 import heroBackground from '@/assets/hero-background.jpg';
 
@@ -67,14 +67,6 @@ const Home = () => {
         </div>
 
         <div className="max-w-7xl mx-auto px-4 text-center relative z-10">
-          {/* Logo */}
-          <div className="flex justify-center mb-8">
-            <img 
-              src={echoJamLogo} 
-              alt="EchoJam Logo" 
-              className="h-24 w-24 rounded-full animate-float"
-            />
-          </div>
 
           {/* Headlines */}
           <h1 className="text-5xl md:text-7xl font-bold mb-6 text-gradient">
@@ -101,15 +93,27 @@ const Home = () => {
 
           {/* Download CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <Button size="lg" className="btn-neon-primary text-lg px-8 py-4 h-auto">
+            <Button 
+              size="lg" 
+              className="btn-neon-primary text-lg px-8 py-4 h-auto"
+              onClick={() => window.open(downloadLinks.windows, '_blank')}
+            >
               <Download className="mr-2 h-5 w-5" />
               Baixar para Windows
             </Button>
-            <Button size="lg" className="btn-neon-secondary text-lg px-8 py-4 h-auto">
+            <Button 
+              size="lg" 
+              className="btn-neon-secondary text-lg px-8 py-4 h-auto"
+              onClick={() => window.open(downloadLinks.mac, '_blank')}
+            >
               <Download className="mr-2 h-5 w-5" />
               Baixar para Mac
             </Button>
-            <Button size="lg" className="btn-neon-accent text-lg px-8 py-4 h-auto">
+            <Button 
+              size="lg" 
+              className="btn-neon-accent text-lg px-8 py-4 h-auto"
+              onClick={() => window.open(downloadLinks.linux, '_blank')}
+            >
               <Download className="mr-2 h-5 w-5" />
               Baixar para Linux
             </Button>
@@ -266,7 +270,11 @@ const Home = () => {
             />
           </div>
 
-          <Button size="lg" className="btn-neon-primary text-lg px-8 py-4 h-auto">
+          <Button 
+            size="lg" 
+            className="btn-neon-primary text-lg px-8 py-4 h-auto"
+            onClick={() => window.open(downloadLinks.windows, '_blank')}
+          >
             <Download className="mr-2 h-5 w-5" />
             Baixe Grátis e Comece Agora
           </Button>
