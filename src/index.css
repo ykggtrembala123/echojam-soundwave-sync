@@ -8,64 +8,60 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Dark base colors */
-    --background: 240 10% 3.9%;
-    --background-secondary: 240 8% 6%;
+    /* Clean dark base colors following EchoJam brand guide */
+    --background: 0 0% 7%;
+    --background-secondary: 0 0% 10%;
     --foreground: 0 0% 98%;
 
-    /* Card variants */
-    --card: 240 10% 7%;
+    /* Card variants - clean and minimal */
+    --card: 0 0% 11%;
     --card-foreground: 0 0% 95%;
-    --card-glass: 240 10% 8%;
+    --card-glass: 0 0% 8% / 0.7;
 
     /* Popover */
-    --popover: 240 10% 8%;
+    --popover: 0 0% 11%;
     --popover-foreground: 0 0% 95%;
 
-    /* EchoJam Purple (Primary from logo) */
-    --primary: 280 100% 70%;
-    --primary-dark: 280 100% 50%;
-    --primary-foreground: 0 0% 98%;
+    /* EchoJam Purple - strategic use only for CTAs */
+    --primary: 276 87% 53%;
+    --primary-dark: 276 87% 43%;
+    --primary-foreground: 0 0% 100%;
 
-    /* Neon Blue (Secondary) */
-    --secondary: 200 100% 60%;
-    --secondary-dark: 200 100% 40%;
+    /* Minimal secondary - subtle grays */
+    --secondary: 210 40% 20%;
+    --secondary-dark: 210 40% 15%;
     --secondary-foreground: 0 0% 98%;
 
-    /* Neon Green (Accent) */
-    --accent: 120 100% 50%;
-    --accent-dark: 120 100% 35%;
-    --accent-foreground: 240 10% 3.9%;
+    /* Cyan accent - for icons and secondary highlights */
+    --accent: 183 100% 74%;
+    --accent-dark: 183 100% 64%;
+    --accent-foreground: 0 0% 9%;
 
-    /* Muted colors */
-    --muted: 240 5% 15%;
-    --muted-foreground: 240 5% 65%;
+    /* Muted colors - clean grays */
+    --muted: 0 0% 25%;
+    --muted-foreground: 0 0% 65%;
 
     /* Danger */
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    /* Borders and inputs */
-    --border: 240 6% 20%;
-    --input: 240 6% 15%;
-    --ring: 280 100% 70%;
+    /* Borders and inputs - neutral */
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 276 87% 53%;
 
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(280 100% 70%), hsl(280 100% 50%));
-    --gradient-secondary: linear-gradient(135deg, hsl(200 100% 60%), hsl(200 100% 40%));
-    --gradient-accent: linear-gradient(135deg, hsl(120 100% 50%), hsl(120 100% 35%));
-    --gradient-hero: linear-gradient(135deg, hsl(280 100% 70%) 0%, hsl(200 100% 60%) 50%, hsl(120 100% 50%) 100%);
-    --gradient-card: linear-gradient(135deg, hsl(240 10% 8%) 0%, hsl(240 10% 12%) 100%);
+    /* Simplified gradients - less flashy */
+    --gradient-primary: linear-gradient(135deg, hsl(276 87% 53%), hsl(276 87% 43%));
+    --gradient-hero: linear-gradient(135deg, hsl(276 87% 53%) 0%, hsl(183 100% 74%) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(0 0% 8%) 0%, hsl(0 0% 12%) 100%);
 
-    /* Glows and shadows */
-    --glow-primary: 0 0 20px hsl(280 100% 70% / 0.5);
-    --glow-secondary: 0 0 20px hsl(200 100% 60% / 0.5);
-    --glow-accent: 0 0 20px hsl(120 100% 50% / 0.5);
-    --shadow-elevated: 0 10px 40px hsl(240 10% 3.9% / 0.8);
+    /* Subtle glows */
+    --glow-primary: 0 0 30px hsl(276 87% 53% / 0.3);
+    --shadow-elevated: 0 10px 40px hsl(0 0% 0% / 0.8);
 
     --radius: 0.75rem;
 
-    /* Animations */
+    /* Smooth animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
@@ -78,7 +74,7 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
-    background: linear-gradient(135deg, hsl(240 10% 3.9%) 0%, hsl(240 8% 6%) 100%);
+    background: linear-gradient(135deg, hsl(0 0% 7%) 0%, hsl(0 0% 10%) 100%);
     min-height: 100vh;
   }
 
@@ -102,7 +98,7 @@ All colors MUST be HSL.
 }
 
 @layer components {
-  /* Neon button variants */
+  /* Strategic neon button - only primary uses purple */
   .btn-neon-primary {
     @apply bg-gradient-to-r from-primary to-primary-dark text-primary-foreground font-semibold py-3 px-6 rounded-lg;
     @apply transition-all duration-300 hover:scale-105 hover:shadow-[var(--glow-primary)];
@@ -110,26 +106,24 @@ All colors MUST be HSL.
   }
 
   .btn-neon-secondary {
-    @apply bg-gradient-to-r from-secondary to-secondary-dark text-secondary-foreground font-semibold py-3 px-6 rounded-lg;
-    @apply transition-all duration-300 hover:scale-105 hover:shadow-[var(--glow-secondary)];
-    @apply border border-secondary/20;
+    @apply bg-secondary/20 text-foreground font-semibold py-3 px-6 rounded-lg border border-secondary/30;
+    @apply transition-all duration-300 hover:bg-secondary/30;
   }
 
   .btn-neon-accent {
-    @apply bg-gradient-to-r from-accent to-accent-dark text-accent-foreground font-semibold py-3 px-6 rounded-lg;
-    @apply transition-all duration-300 hover:scale-105 hover:shadow-[var(--glow-accent)];
-    @apply border border-accent/20;
+    @apply bg-accent/20 text-accent font-semibold py-3 px-6 rounded-lg border border-accent/30;
+    @apply transition-all duration-300 hover:bg-accent/30;
   }
 
-  /* Glass morphism cards */
+  /* Clean glass cards */
   .card-glass {
-    @apply bg-card-glass/80 backdrop-blur-xl border border-border/20 rounded-xl;
+    @apply bg-card/80 backdrop-blur-xl border border-border/20 rounded-xl;
     @apply shadow-[var(--shadow-elevated)];
   }
 
-  /* Animated equalizer bars */
+  /* Simplified equalizer */
   .equalizer-bar {
-    @apply w-1 bg-gradient-to-t from-primary via-secondary to-accent rounded-full;
+    @apply w-1 bg-gradient-to-t from-primary/60 to-accent/60 rounded-full;
     animation: equalizer 1.5s ease-in-out infinite alternate;
   }
 
@@ -138,28 +132,13 @@ All colors MUST be HSL.
   .equalizer-bar:nth-child(4) { animation-delay: 0.6s; }
   .equalizer-bar:nth-child(5) { animation-delay: 0.8s; }
 
-  /* Glow text */
-  .text-glow-primary {
-    @apply text-primary;
-    text-shadow: var(--glow-primary);
-  }
-
-  .text-glow-secondary {
-    @apply text-secondary;
-    text-shadow: var(--glow-secondary);
-  }
-
-  .text-glow-accent {
-    @apply text-accent;
-    text-shadow: var(--glow-accent);
-  }
-
-  /* Animated gradient text */
+  /* Clean gradient text */
   .text-gradient {
     background: var(--gradient-hero);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    background-size: 200% 200%;
     animation: gradient-shift 3s ease-in-out infinite;
   }
 }

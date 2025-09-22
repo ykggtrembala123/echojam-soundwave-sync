@@ -34,23 +34,6 @@ const Home = () => {
     },
   ];
 
-  const competitors = [
-    {
-      name: 'Spotify Group Session',
-      issues: ['Limitado a Premium', 'Delay perceptível', 'Poucos controles'],
-      color: 'text-red-400',
-    },
-    {
-      name: 'Discord Bots',
-      issues: ['Instável', 'Complicado', 'Qualidade baixa'],
-      color: 'text-red-400',
-    },
-    {
-      name: 'EchoJam',
-      issues: ['100% Grátis', 'Sem delay', 'Controle total'],
-      color: 'text-accent',
-    },
-  ];
 
   return (
     <div className="min-h-screen">
@@ -105,13 +88,13 @@ const Home = () => {
 
           {/* Trust Badge */}
           <div className="flex flex-wrap justify-center gap-2 mb-12">
-            <Badge variant="secondary" className="bg-accent/20 text-accent border-accent/30">
+            <Badge variant="secondary" className="bg-muted/20 text-foreground border-muted/30">
               ✓ 100% Grátis
             </Badge>
-            <Badge variant="secondary" className="bg-secondary/20 text-secondary border-secondary/30">
+            <Badge variant="secondary" className="bg-muted/20 text-foreground border-muted/30">
               ✓ Sem anúncios
             </Badge>
-            <Badge variant="secondary" className="bg-primary/20 text-primary border-primary/30">
+            <Badge variant="secondary" className="bg-muted/20 text-foreground border-muted/30">
               ✓ Sem cadastro
             </Badge>
           </div>
@@ -159,33 +142,115 @@ const Home = () => {
       </section>
 
       {/* Comparison Section */}
-      <section className="py-20 px-4 bg-background-secondary">
+      <section className="py-20 px-4 bg-muted/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Por que escolher o EchoJam?</h2>
+            <h2 className="text-4xl font-bold mb-4">
+              Por que escolher o <span className="text-primary">EchoJam</span>?
+            </h2>
             <p className="text-xl text-muted-foreground">
               Veja como nos comparamos com outras soluções
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {competitors.map((competitor, index) => (
-              <div key={competitor.name} className="card-glass p-6">
-                <h3 className={`text-xl font-bold mb-4 ${competitor.color}`}>
-                  {competitor.name}
-                </h3>
-                <ul className="space-y-2">
-                  {competitor.issues.map((issue, i) => (
-                    <li key={i} className={`flex items-center ${competitor.color}`}>
-                      <span className="mr-2">
-                        {competitor.name === 'EchoJam' ? '✓' : '✗'}
-                      </span>
-                      {issue}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+          <div className="overflow-x-auto">
+            <table className="w-full max-w-5xl mx-auto bg-card rounded-2xl border border-border">
+              <thead>
+                <tr className="border-b border-border">
+                  <th className="text-left py-6 px-6 font-semibold text-lg">Funcionalidade</th>
+                  <th className="text-center py-6 px-4 font-semibold text-lg text-primary">EchoJam</th>
+                  <th className="text-center py-6 px-4 font-semibold text-lg text-muted-foreground">Spotify</th>
+                  <th className="text-center py-6 px-4 font-semibold text-lg text-muted-foreground">Rave</th>
+                  <th className="text-center py-6 px-4 font-semibold text-lg text-muted-foreground">Discord Bots</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-border/50">
+                  <td className="py-4 px-6 font-medium">Sincronia Real-Time</td>
+                  <td className="text-center py-4 px-4">
+                    <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-green-500/20 text-green-400">✓</span>
+                  </td>
+                  <td className="text-center py-4 px-4">
+                    <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-green-500/20 text-green-400">✓</span>
+                  </td>
+                  <td className="text-center py-4 px-4">
+                    <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-green-500/20 text-green-400">✓</span>
+                  </td>
+                  <td className="text-center py-4 px-4">
+                    <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-red-500/20 text-red-400">✗</span>
+                  </td>
+                </tr>
+                <tr className="border-b border-border/50">
+                  <td className="py-4 px-6 font-medium">Custo</td>
+                  <td className="text-center py-4 px-4">
+                    <span className="text-primary font-bold">Grátis</span>
+                  </td>
+                  <td className="text-center py-4 px-4 text-muted-foreground">Pago</td>
+                  <td className="text-center py-4 px-4 text-muted-foreground">Grátis c/ Ads</td>
+                  <td className="text-center py-4 px-4 text-muted-foreground">Grátis</td>
+                </tr>
+                <tr className="border-b border-border/50">
+                  <td className="py-4 px-6 font-medium">Mixagem Individual</td>
+                  <td className="text-center py-4 px-4">
+                    <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-green-500/20 text-green-400">✓</span>
+                  </td>
+                  <td className="text-center py-4 px-4">
+                    <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-red-500/20 text-red-400">✗</span>
+                  </td>
+                  <td className="text-center py-4 px-4">
+                    <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-red-500/20 text-red-400">✗</span>
+                  </td>
+                  <td className="text-center py-4 px-4">
+                    <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-red-500/20 text-red-400">✗</span>
+                  </td>
+                </tr>
+                <tr className="border-b border-border/50">
+                  <td className="py-4 px-6 font-medium">Suporte Multiplataforma</td>
+                  <td className="text-center py-4 px-4">
+                    <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-green-500/20 text-green-400">✓</span>
+                  </td>
+                  <td className="text-center py-4 px-4">
+                    <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-red-500/20 text-red-400">✗</span>
+                  </td>
+                  <td className="text-center py-4 px-4">
+                    <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-green-500/20 text-green-400">✓</span>
+                  </td>
+                  <td className="text-center py-4 px-4">
+                    <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-green-500/20 text-green-400">✓</span>
+                  </td>
+                </tr>
+                <tr className="border-b border-border/50">
+                  <td className="py-4 px-6 font-medium">Uso Offline</td>
+                  <td className="text-center py-4 px-4">
+                    <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-green-500/20 text-green-400">✓</span>
+                  </td>
+                  <td className="text-center py-4 px-4">
+                    <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-red-500/20 text-red-400">✗</span>
+                  </td>
+                  <td className="text-center py-4 px-4">
+                    <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-red-500/20 text-red-400">✗</span>
+                  </td>
+                  <td className="text-center py-4 px-4">
+                    <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-red-500/20 text-red-400">✗</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="py-4 px-6 font-medium">Sem Cadastro</td>
+                  <td className="text-center py-4 px-4">
+                    <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-green-500/20 text-green-400">✓</span>
+                  </td>
+                  <td className="text-center py-4 px-4">
+                    <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-red-500/20 text-red-400">✗</span>
+                  </td>
+                  <td className="text-center py-4 px-4">
+                    <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-red-500/20 text-red-400">✗</span>
+                  </td>
+                  <td className="text-center py-4 px-4">
+                    <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-red-500/20 text-red-400">✗</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
@@ -193,18 +258,12 @@ const Home = () => {
       {/* Showcase Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-8">Experiência completa só no app</h2>
-          <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
-            Aqui você vê a prévia. No app, você vive a experiência completa com controle total e sem interrupções.
-          </p>
-          
           <div className="relative max-w-4xl mx-auto mb-12">
             <img 
               src={playerMockup} 
               alt="EchoJam Player Interface" 
-              className="w-full rounded-2xl shadow-2xl border border-primary/20"
+              className="w-full rounded-2xl shadow-2xl border border-border"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent rounded-2xl"></div>
           </div>
 
           <Button size="lg" className="btn-neon-primary text-lg px-8 py-4 h-auto">
