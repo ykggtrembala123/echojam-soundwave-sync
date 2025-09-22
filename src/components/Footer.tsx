@@ -13,9 +13,9 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center">
               <img 
-                src="/src/assets/echojam-logo-full.png" 
+                src="src/assets/echojam-logo-full.png" 
                 alt="EchoJam" 
-                className="h-8"
+                className="h-12"
               />
             </div>
             <p className="text-sm text-muted-foreground">

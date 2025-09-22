@@ -27,9 +27,9 @@ const Navigation = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img 
-              src="/src/assets/echojam-logo-full.png" 
+              src="src/assets/echojam-logo-full.png" 
               alt="EchoJam" 
-              className="h-8"
+              className="h-10"
             />
           </Link>
 
