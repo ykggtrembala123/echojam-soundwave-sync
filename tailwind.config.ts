@@ -18,13 +18,16 @@ export default {
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
+        "background-secondary": "hsl(var(--background-secondary))",
         foreground: "hsl(var(--foreground))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
+          dark: "hsl(var(--primary-dark))",
           foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
+          dark: "hsl(var(--secondary-dark))",
           foreground: "hsl(var(--secondary-foreground))",
         },
         destructive: {
@@ -37,6 +40,7 @@ export default {
         },
         accent: {
           DEFAULT: "hsl(var(--accent))",
+          dark: "hsl(var(--accent-dark))",
           foreground: "hsl(var(--accent-foreground))",
         },
         popover: {
@@ -45,17 +49,8 @@ export default {
         },
         card: {
           DEFAULT: "hsl(var(--card))",
+          glass: "hsl(var(--card-glass))",
           foreground: "hsl(var(--card-foreground))",
-        },
-        sidebar: {
-          DEFAULT: "hsl(var(--sidebar-background))",
-          foreground: "hsl(var(--sidebar-foreground))",
-          primary: "hsl(var(--sidebar-primary))",
-          "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
-          accent: "hsl(var(--sidebar-accent))",
-          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
-          border: "hsl(var(--sidebar-border))",
-          ring: "hsl(var(--sidebar-ring))",
         },
       },
       borderRadius: {
@@ -84,6 +79,11 @@ export default {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "float": "float 3s ease-in-out infinite",
+        "pulse-slow": "pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+        "bounce-gentle": "bounce-gentle 2s infinite",
+        "gradient-shift": "gradient-shift 3s ease-in-out infinite",
+        "equalizer": "equalizer 1.5s ease-in-out infinite alternate",
       },
     },
   },
