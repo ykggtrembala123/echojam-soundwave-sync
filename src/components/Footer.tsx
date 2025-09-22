@@ -11,13 +11,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-3">
+            <div className="flex items-center">
               <img 
-                src={echoJamLogo} 
+                src="/src/assets/echojam-logo-full.png" 
                 alt="EchoJam" 
-                className="h-8 w-8 rounded-full"
+                className="h-8"
               />
-              <div className="text-xl font-bold text-gradient">EchoJam</div>
             </div>
             <p className="text-sm text-muted-foreground">
               O primeiro app 100% grátis para ouvir músicas em tempo real com amigos.
