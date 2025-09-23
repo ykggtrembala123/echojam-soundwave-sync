@@ -13,7 +13,7 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center">
               <img 
-                src="src/assets/echojam-logo-full.png" 
+                src={echoJamLogo} 
                 alt="EchoJam" 
                 className="h-12"
               />
