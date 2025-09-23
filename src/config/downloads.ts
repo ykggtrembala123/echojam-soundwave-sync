@@ -1,8 +1,8 @@
 // Centralized download configuration
 export const downloadLinks = {
-  windows: "https://example.com/echojam-windows.exe", // Update this URL when ready
-  mac: "https://example.com/echojam-mac.dmg", // Update this URL when ready
-  linux: "https://example.com/echojam-linux.appimage", // Update this URL when ready
+  windows: "https://cdn.discordapp.com/attachments/1419137515503226920/1419843319697248426/EchoJam.rar?ex=68d33ba2&is=68d1ea22&hm=f3ebb56c43c724f20b3b28a95ee2828213e68b0ca2b575d02ebfba13e02ed2cd&",
+  mac: "https://cdn.discordapp.com/attachments/1419137515503226920/1419843319697248426/EchoJam.rar?ex=68d33ba2&is=68d1ea22&hm=f3ebb56c43c724f20b3b28a95ee2828213e68b0ca2b575d02ebfba13e02ed2cd&",
+  linux: "https://cdn.discordapp.com/attachments/1419137515503226920/1419843319697248426/EchoJam.rar?ex=68d33ba2&is=68d1ea22&hm=f3ebb56c43c724f20b3b28a95ee2828213e68b0ca2b575d02ebfba13e02ed2cd&",
 } as const;
 
 export type Platform = keyof typeof downloadLinks;
