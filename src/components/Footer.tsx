@@ -15,7 +15,7 @@ const Footer = () => {
               <img 
                 src={echoJamLogo} 
                 alt="EchoJam" 
-                className="h-12"
+                className="h-20"
               />
             </div>
             <p className="text-sm text-muted-foreground">

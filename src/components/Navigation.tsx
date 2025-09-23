@@ -29,7 +29,7 @@ const Navigation = () => {
             <img 
               src={echoJamLogo} 
               alt="EchoJam" 
-              className="h-10"
+              className="h-16"
             />
           </Link>
 
