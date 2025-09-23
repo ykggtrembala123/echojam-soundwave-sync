@@ -69,7 +69,7 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 text-center relative z-10">
 
           {/* Headlines */}
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-gradient">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-gradient leading-tight px-2">
             Escute junto, viva o som
           </h1>
           
