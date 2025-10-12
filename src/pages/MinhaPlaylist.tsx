@@ -148,7 +148,7 @@ const MinhaPlaylist = () => {
               </div>
               <div>
                 <h1 className="text-4xl font-bold">Indie BR Vibes ✨</h1>
-                <p className="text-muted-foreground">Sua playlist • 20 músicas • 49 curtidas</p>
+                <p className="text-muted-foreground">Playlist de GabiS2 • 20 músicas • 49 curtidas</p>
               </div>
             </div>
             <div className="flex gap-3">
