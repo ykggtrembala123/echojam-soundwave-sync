@@ -19,7 +19,7 @@ interface Song {
   isLiked: boolean;
 }
 
-const CORRECT_CODE = '665262';
+const CORRECT_CODE = '666262';
 
 const playlistSongs: Song[] = [
   { id: 1, title: 'Você Vai Me Destruir', artist: 'Tuyo', album: 'Pra Doer', duration: '3:52', likes: 645, isLiked: true },
