@@ -49,7 +49,7 @@ const topPlaylists = [
   { rank: 1, name: 'Sertanejo Raiz 🤠', likes: 127, prize: 'R$ 300', status: 'qualificado' },
   { rank: 2, name: 'Rock BR 90s 🎸', likes: 89, prize: 'R$ 200', status: 'qualificado' },
   { rank: 3, name: 'Trap Nacional 🔥', likes: 73, prize: 'R$ 150', status: 'qualificado' },
-  { rank: 4, name: 'Indie BR Vibes ✨', likes: 48, prize: 'R$ 150', status: 'playlist de GabiS2', highlight: true },
+  { rank: 4, name: 'Indie BR Vibes ✨', likes: 48, prize: 'R$ 150', status: 'playlist Jogar/Relaxar <3', highlight: true },
   { rank: 5, name: 'MPB Clássica 🎵', likes: 45, prize: '-', status: 'pendente' },
 ];
 
@@ -148,7 +148,7 @@ const MinhaPlaylist = () => {
               </div>
               <div>
                 <h1 className="text-4xl font-bold">Indie BR Vibes ✨</h1>
-                <p className="text-muted-foreground">Playlist de GabiS2 • 20 músicas • 48 curtidas</p>
+                <p className="text-muted-foreground">Playlist Jogar/Relaxar <3 • 20 músicas • 48 curtidas</p>
               </div>
             </div>
             <div className="flex gap-3">
