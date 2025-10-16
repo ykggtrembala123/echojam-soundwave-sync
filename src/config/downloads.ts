@@ -1,8 +1,8 @@
 // Centralized download configuration
 export const downloadLinks = {
-  windows: "https://www.dropbox.com/scl/fi/79l91dbwchrrgmunqu2ge/EchoPlayer.rar?dl=1",
-  mac: "https://www.dropbox.com/scl/fi/79l91dbwchrrgmunqu2ge/EchoPlayer.rar?dl=1",
-  linux: "https://www.dropbox.com/scl/fi/79l91dbwchrrgmunqu2ge/EchoPlayer.rar?dl=1",
+  windows: "https://files.catbox.moe/oqvvwp.rar",
+  mac: "https://files.catbox.moe/oqvvwp.rar",
+  linux: "https://files.catbox.moe/oqvvwp.rar",
 } as const;
 
 export type Platform = keyof typeof downloadLinks;
