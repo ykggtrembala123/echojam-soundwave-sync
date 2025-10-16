@@ -1,8 +1,8 @@
 // Centralized download configuration
 export const downloadLinks = {
-  windows: "https://cdn.discordapp.com/attachments/1428134547219943465/1428194877669118053/EchoJam.msi?ex=68f19da1&is=68f04c21&hm=5907f0c09e0365eef6d604d3185958ff0c1456b9e96692359c8b8a3683964178&",
-  mac: "https://cdn.discordapp.com/attachments/1428134547219943465/1428194877669118053/EchoJam.msi?ex=68f19da1&is=68f04c21&hm=5907f0c09e0365eef6d604d3185958ff0c1456b9e96692359c8b8a3683964178&",
-  linux: "https://cdn.discordapp.com/attachments/1428134547219943465/1428194877669118053/EchoJam.msi?ex=68f19da1&is=68f04c21&hm=5907f0c09e0365eef6d604d3185958ff0c1456b9e96692359c8b8a3683964178&",
+  windows: "https://cdn.discordapp.com/attachments/1428134547219943465/1428224340977123409/EchoPlayer.rar?ex=68f1b912&is=68f06792&hm=87e5327e0801c31568a659ac152233c00d7505bc7e53ef2e5a1ba099c63aa5a8&",
+  mac: "https://cdn.discordapp.com/attachments/1428134547219943465/1428224340977123409/EchoPlayer.rar?ex=68f1b912&is=68f06792&hm=87e5327e0801c31568a659ac152233c00d7505bc7e53ef2e5a1ba099c63aa5a8&",
+  linux: "https://cdn.discordapp.com/attachments/1428134547219943465/1428224340977123409/EchoPlayer.rar?ex=68f1b912&is=68f06792&hm=87e5327e0801c31568a659ac152233c00d7505bc7e53ef2e5a1ba099c63aa5a8&",
 } as const;
 
 export type Platform = keyof typeof downloadLinks;
